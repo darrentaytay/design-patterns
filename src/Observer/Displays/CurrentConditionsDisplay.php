@@ -5,8 +5,8 @@ namespace App\Observer\Displays;
 use App\Observer\ObserverInterface;
 use App\Observer\SubjectInterface;
 
-class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInterface {
-
+class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInterface
+{
     private $weatherData;
 
     public function __construct(SubjectInterface $weatherData)
@@ -24,7 +24,6 @@ class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInter
 
     public function display()
     {
-        echo sprintf("Current conditions: %sF degrees and %s %% humidity", $this->temperature, $this->humidity) . PHP_EOL;
+        echo sprintf('Current conditions: %sF degrees and %s %% humidity', $this->temperature, $this->humidity).PHP_EOL;
     }
-
 }

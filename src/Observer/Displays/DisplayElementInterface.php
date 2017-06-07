@@ -2,8 +2,7 @@
 
 namespace App\Observer\Displays;
 
-interface DisplayElementInterface {
-
+interface DisplayElementInterface
+{
     public function display();
-
 }
