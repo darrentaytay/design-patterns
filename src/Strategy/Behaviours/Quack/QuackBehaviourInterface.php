@@ -2,8 +2,7 @@
 
 namespace App\Strategy\Behaviours\Quack;
 
-interface QuackBehaviourInterface {
-
-	public function quack();
-
+interface QuackBehaviourInterface
+{
+    public function quack();
 }
