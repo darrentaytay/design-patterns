@@ -2,8 +2,8 @@
 
 namespace App\Observer;
 
-class WeatherData implements SubjectInterface {
-
+class WeatherData implements SubjectInterface
+{
     protected $observers = [];
 
     private $temperature;
@@ -19,13 +19,11 @@ class WeatherData implements SubjectInterface {
 
     public function removeObserver(ObserverInterface $observer)
     {
-
     }
 
     public function notifyObservers()
     {
-        foreach($this->observers as $observer)
-        {
+        foreach ($this->observers as $observer) {
             $observer->update($this->temperature, $this->humidity, $this->pressure);
         }
     }
@@ -43,5 +41,4 @@ class WeatherData implements SubjectInterface {
 
         $this->measurementsChanged();
     }
-
 }

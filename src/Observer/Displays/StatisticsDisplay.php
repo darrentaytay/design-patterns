@@ -5,8 +5,8 @@ namespace App\Observer\Displays;
 use App\Observer\ObserverInterface;
 use App\Observer\SubjectInterface;
 
-class StatisticsDisplay implements ObserverInterface, DisplayElementInterface {
-
+class StatisticsDisplay implements ObserverInterface, DisplayElementInterface
+{
     private $maximumTemperature = 0.0;
 
     private $minimumTemperature = 200;
@@ -28,11 +28,11 @@ class StatisticsDisplay implements ObserverInterface, DisplayElementInterface {
         $this->temperatureSum += $temperature;
         $this->numberOfReadings++;
 
-        if($temperature > $this->maximumTemperature) {
+        if ($temperature > $this->maximumTemperature) {
             $this->maximumTemperature = $temperature;
         }
 
-        if($temperature < $this->minimumTemperature) {
+        if ($temperature < $this->minimumTemperature) {
             $this->minimumTemperature = $temperature;
         }
 
@@ -44,11 +44,10 @@ class StatisticsDisplay implements ObserverInterface, DisplayElementInterface {
         $averageTemperature = $this->temperatureSum / $this->numberOfReadings;
 
         echo sprintf(
-            "Average/Maximum/Minimum temperature =  %s/%s/%s",
+            'Average/Maximum/Minimum temperature =  %s/%s/%s',
             $averageTemperature,
             $this->maximumTemperature,
             $this->minimumTemperature
-        ) . PHP_EOL;
+        ).PHP_EOL;
     }
-
 }

@@ -2,11 +2,11 @@
 
 require_once '../../vendor/autoload.php';
 
-use App\Observer\WeatherData;
 use App\Observer\Displays\CurrentConditionsDisplay;
-use App\Observer\Displays\StatisticsDisplay;
 use App\Observer\Displays\ForecastDisplay;
 use App\Observer\Displays\HeatIndexDisplay;
+use App\Observer\Displays\StatisticsDisplay;
+use App\Observer\WeatherData;
 
 $weatherData = new WeatherData();
 
@@ -24,7 +24,7 @@ $weatherData->setMeasurements(78, 90, 29.2);
 
 function printHeader($text)
 {
-    echo '------------------------' . PHP_EOL;
-    echo $text . PHP_EOL;
-    echo '------------------------' . PHP_EOL;
+    echo '------------------------'.PHP_EOL;
+    echo $text.PHP_EOL;
+    echo '------------------------'.PHP_EOL;
 }

@@ -2,8 +2,7 @@
 
 namespace App\Observer;
 
-interface ObserverInterface {
-
+interface ObserverInterface
+{
     public function update($temperature, $humidity, $pressure);
-
 }

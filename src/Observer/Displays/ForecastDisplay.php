@@ -5,8 +5,8 @@ namespace App\Observer\Displays;
 use App\Observer\ObserverInterface;
 use App\Observer\SubjectInterface;
 
-class ForecastDisplay implements ObserverInterface, DisplayElementInterface {
-
+class ForecastDisplay implements ObserverInterface, DisplayElementInterface
+{
     private $currentPressure = 29.92;
 
     private $lastPressure;
@@ -31,19 +31,16 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface {
 
     public function display()
     {
-        $message = "Forecast: ";
+        $message = 'Forecast: ';
 
-        if($this->currentPressure > $this->lastPressure) {
-            $message .= "Improving weather on the way!";
-        }
-        else if ($this->currentPressure == $this->lastPressure) {
-            $message .= "More of the same";
-        }
-        else if ($this->currentPressure < $this->lastPressure) {
-            $message .= "Watch out for cooler, rainy weather";
+        if ($this->currentPressure > $this->lastPressure) {
+            $message .= 'Improving weather on the way!';
+        } elseif ($this->currentPressure == $this->lastPressure) {
+            $message .= 'More of the same';
+        } elseif ($this->currentPressure < $this->lastPressure) {
+            $message .= 'Watch out for cooler, rainy weather';
         }
 
-        echo $message . PHP_EOL;
+        echo $message.PHP_EOL;
     }
-
 }
