@@ -2,8 +2,8 @@
 
 namespace App\Decorator;
 
-class Decaf extends Beverage {
-
+class Decaf extends Beverage
+{
     public function __construct()
     {
         $this->description = 'Decaf Coffee';
@@ -13,5 +13,4 @@ class Decaf extends Beverage {
     {
         return 1.05;
     }
-
 }
