@@ -8,3 +8,4 @@ Working through Head First Design Patterns, implementing the examples in PHP.
 
 * [Strategy](src/Strategy)
 * [Observer](src/Observer)
+* [Decorator](src/Decorator)
